@@ -1,4 +1,4 @@
-🎉 EventConnect
+#🎉 EventConnect
 Proyecto Aula Semestre 5
 
 Proyecto Aula – Semestre 5
