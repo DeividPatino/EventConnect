@@ -1,0 +1,16 @@
+# 📓 CHANGELOG – EventConnect
+
+Registro de cambios realizados al proyecto durante el desarrollo.
+
+---
+
+## [9/04/2025] – 📁 Inicialización del Repositorio
+- Se crea el repositorio de EventConnect en GitHub.
+- Se sube el documento base del Proyecto Aula.
+- Se configura la estructura inicial del proyecto.
+
+---
+
+## [14/04/2025] - 🧱 Estructura del Proyecto
+- Se organiza la estructura de carpetas: `CSS/`, `JS/`, `VIEW/`.
+-- Se añade el archivo `login.html` y 'register.html'.
