@@ -17,6 +17,7 @@ _Proyecto Aula – Semestre 5_
 
 ## 📌 Próximos pasos
 - (Por definir)
+- [x] Tarea hecha
 
 ## 📅 Última actualización: 9 de abril de 2025
 
