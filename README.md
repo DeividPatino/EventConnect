@@ -24,7 +24,7 @@ _Proyecto Aula – Semestre 5_
 - Deivid Patiño – [@DeividPatino](https://github.com/DeividPatino)
 - Caled Vivanco – [@CaledVivanco](https://github.com/CaledVivanco)
 - Omar Coronel - [@omarcito21](https://github.com/omarcito21)
-- Yohan Maldonado - []()
+- Yohan Maldonado - [@YohanDvl](https://github.com/YohanDvl)
 
 ## 🧾 Licencia
 Este proyecto es de uso académico. Todos los derechos reservados al grupo desarrollador – 2025.
