@@ -1,8 +1,10 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 9 de abril de 2025
-- Se agrega el documento del Proyecto aula y creación del repositorio del P.A en GitHub.
+## 📅 Actualización: 15 de abril de 2025
+- Se agrega las carpetas CSS y View.
+- Se añadan los archivos login.html y register.html
+- Se crea un archivo CHANGELOG.md para tener un control de actualizaciónes
 
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
@@ -20,7 +22,7 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
   
 
-## 📅 Última actualización: 9 de abril de 2025
+## 📅 Última actualización: 15 de abril de 2025
 
 ## 👥 Autores
 - Deivid Patiño – [@DeividPatino](https://github.com/DeividPatino)
