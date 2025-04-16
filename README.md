@@ -28,3 +28,7 @@ _Proyecto Aula – Semestre 5_
 
 ## 🧾 Licencia
 Este proyecto es de uso académico. Todos los derechos reservados al grupo desarrollador – 2025.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
+</p>
