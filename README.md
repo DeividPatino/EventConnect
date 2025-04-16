@@ -16,8 +16,9 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
 
 ## 📌 Próximos pasos
+- [ ] Crear Paginas: Login, Registro y Principal
 - (Por definir)
-- [x] Tarea hecha
+  
 
 ## 📅 Última actualización: 9 de abril de 2025
 
