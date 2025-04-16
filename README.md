@@ -23,7 +23,7 @@ _Proyecto Aula – Semestre 5_
   
 
 ## 📅 Última actualización: 15 de abril de 2025
-📘 [Ver historial de actualizaciones](./CHANGELOG.md)
+📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
 - Deivid Patiño – [@DeividPatino](https://github.com/DeividPatino)
