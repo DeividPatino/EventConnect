@@ -13,7 +13,7 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 
 ## [15/04/2025] - 🧱 Estructura del Proyecto
 - Se organiza la estructura de carpetas: `CSS/`, `VIEW/`.
--- Se añade el archivo `login.html` y 'register.html'.
+- Se añade el archivo `login.html` y `register.html`.
 
 ---
 
