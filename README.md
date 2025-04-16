@@ -33,4 +33,6 @@ Este proyecto es de uso académico. Todos los derechos reservados al grupo desar
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
 </p>
 
-<img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" />
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" />
+</p>
