@@ -12,6 +12,18 @@ body {
     margin: 50px auto;
 }
 
+.form-login {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"],
+.form-login input[type="submit"],
 .form-registro input[type="text"],
 .form-registro input[type="email"],
 .form-registro input[type="password"],
@@ -24,6 +36,8 @@ body {
     transition: 0.3s ease;
 }
 
+.form-login input[type="text"],
+.form-login input[type="password"],
 .form-registro input[type="text"],
 .form-registro input[type="email"],
 .form-registro input[type="password"] {
@@ -38,6 +52,26 @@ body {
     cursor: pointer;
 }
 
+.form-login input[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-login input[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .form-registro input[type="submit"]:hover {
+    background: #45a049;
+}
+
+.form-login input[type="submit"]:hover {
     background: #45a049;
 }
