@@ -1,20 +1,21 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 15 de abril de 2025
-- Se agrega las carpetas CSS y View.
-- Se añadan los archivos login.html y register.html
-- Se crea un archivo CHANGELOG.md para tener un control de actualizaciónes
+## 📅 Actualización: 18 de abril de 2025
+- Se agrega la carpeta JS.
+- Se comienza con el trabajo CSS
 
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
 - 📁 Estructura inicial del repositorio
+- 📁 Carpeta `CSS/` y `JS/` agregadas.
 
 ## 📁 Estado del Proyecto
 - 🚀 Repositorio creado y documento inicial del proyecto agregado.
 - 🛠️ En proceso de desarrollo...
 
 ## 🧠 Tecnologías planeadas
+- **Frontend**: HTML, CSS, JavaScript.
 - (Por definir)
 
 ## 📌 Próximos pasos
@@ -22,7 +23,7 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
   
 
-## 📅 Última actualización: 15 de abril de 2025
+## 📅 Última actualización: 18 de abril de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
