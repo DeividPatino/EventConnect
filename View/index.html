@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventConnect</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="auth.js" defer></script>
+  <script src="utils.js" defer></script>
+</head>
+<body class="landing-body">
+  <div class="landing-container">
+    <header class="landing-header">
+      <h1>🎉 EventConnect</h1>
+      <p>Conectando organizadores de eventos con los mejores proveedores</p>
+      <div id="welcome-msg"></div>
+    </header>
+
+    <main class="landing-main">
+      <img src="https://www.svgrepo.com/show/379005/event.svg" alt="Eventos" class="landing-illustration" />
+      <div class="landing-buttons" id="auth-buttons">
+        <a href="login.html" class="btn btn-primary">Iniciar Sesión</a>
+        <a href="register.html" class="btn btn-secondary">Registrarse</a>
+      </div>
+      <div class="landing-buttons" id="logout-button" style="display: none;">
+        <button class="btn btn-secondary" onclick="logout()">Cerrar sesión</button>
+      </div>
+    </main>
+    
+    <footer class="landing-footer">
+      <p>&copy; 2025 EventConnect. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded'), () => {
+      const user = getCurrentUser();
+    }
