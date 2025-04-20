@@ -4,6 +4,8 @@ _Proyecto Aula – Semestre 5_
 ## 📅 Actualización: 20 de abril de 2025
 - Se agrega la carpeta JS.
 - Se comienza con el trabajo CSS
+- se agrega el archivo index el cual es la vista de la pagina principal
+  
 
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
