@@ -2,9 +2,6 @@
 _Proyecto Aula – Semestre 5_
 
 ## 📅 Actualización: 21 de abril de 2025
-- Se agrega la carpeta JS.
-- Se comienza con el trabajo CSS
-- se agrega el archivo index el cual es la vista de la pagina principal
 - Se Agrega El archivo css y js En el cual esta el estilo de la pagina principal y otras funciones
 - Se Actualiza el login 
   
@@ -27,7 +24,7 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
   
 
-## 📅 Última actualización: 20 de abril de 2025
+## 📅 Última actualización: 21 de abril de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
