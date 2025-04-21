@@ -25,7 +25,7 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
   
 
-## 📅 Última actualización: 18 de abril de 2025
+## 📅 Última actualización: 20 de abril de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
