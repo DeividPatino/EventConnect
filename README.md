@@ -1,10 +1,11 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 20 de abril de 2025
+## 📅 Actualización: 21 de abril de 2025
 - Se agrega la carpeta JS.
 - Se comienza con el trabajo CSS
 - se agrega el archivo index el cual es la vista de la pagina principal
+- Se Agrega El archivo css y js En el cual esta el estilo de la pagina principal y otras funciones 
   
 
 ## 📂 Contenido actual
