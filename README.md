@@ -21,7 +21,7 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
 
 ## 📌 Próximos pasos
-- [ ] Crear Paginas: Login, Registro y Principal
+- [x] Crear Paginas: Login, Registro y Principal
 - (Por definir)
   
 
