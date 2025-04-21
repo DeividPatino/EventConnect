@@ -22,6 +22,8 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 - Se añade la carpeta: `JS/`.
 - Se completo el formulario de registro.
 - Se comenzo el trabajo con CSS para los formularios
+## [20/04/2025] - 🎨 Implementación de Pagina Principal
+- se agrega el archivo index el cual es la vista de la pagina principal
 
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
