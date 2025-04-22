@@ -3,7 +3,8 @@ _Proyecto Aula – Semestre 5_
 
 ## 📅 Actualización: 21 de abril de 2025
 - Se Agrega El archivo css y js En el cual esta el estilo de la pagina principal y otras funciones
-- Se Actualiza el login 
+- Se Actualiza el login
+- Se empezo hacer el documento regerenciado a nuestro proyecto aula llamado EventConnect
   
 
 ## 📂 Contenido actual
