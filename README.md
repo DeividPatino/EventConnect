@@ -22,7 +22,7 @@ _Proyecto Aula – Semestre 5_
 
 ## 📌 Próximos pasos
 - [x] Crear Paginas: Login, Registro y Principal
-- [ ] bd
+- [x] bd
 - (Por definir)
   
 
