@@ -31,6 +31,7 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 ---
 
 ## [21/04/2025] 
+-  Se empezo hacer el documento regerenciado a nuestro proyecto aula llamado EventConnect
 - Se Agrega El archivo css y js En el cual esta el estilo de la pagina principal y otras funciones
 - Se Actualiza el login
 
