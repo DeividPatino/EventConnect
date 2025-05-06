@@ -1,10 +1,9 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 21 de abril de 2025
-- Se Agrega El archivo css y js En el cual esta el estilo de la pagina principal y otras funciones
-- Se Actualiza el login
-- Se empezo hacer el documento regerenciado a nuestro proyecto aula llamado EventConnect
+## 📅 Actualización: 5 de mayo de 2025
+- Se crea la carpeta Model
+- Se empieza a crear la base de datos para registro e inicio de sesión
   
 
 ## 📂 Contenido actual
@@ -25,7 +24,7 @@ _Proyecto Aula – Semestre 5_
 - (Por definir)
   
 
-## 📅 Última actualización: 21 de abril de 2025
+## 📅 Última actualización: 5 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
