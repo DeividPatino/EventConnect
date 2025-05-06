@@ -12,7 +12,7 @@ $cr = $_POST['cor'];
 $dr = $_POST['cont'];
 
 $query = "INSERT INTO registro(`nombre`, `apellido`, `correo`, `contraseña`)
-VALUES('". mysql_real_escape_string($connection_obj, $ar)."', '". mysql_real_escape_string($connection_obj, $br) ."', '". mysql_real_escape_string($connection_obj, $cr) ."', '". mysql_real_escape_string($connection_obj, $dr) ."')";
+VALUES('". mysqli_real_escape_string($connection_obj, $ar)."', '". mysqli_real_escape_string($connection_obj, $br) ."', '". mysqli_real_escape_string($connection_obj, $cr) ."', '". mysqli_real_escape_string($connection_obj, $dr) ."')";
 
 $res = mysqli_query($connection_obj, $query);
 if($res){
