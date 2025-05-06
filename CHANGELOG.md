@@ -35,5 +35,11 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 - Se Agrega El archivo css y js En el cual esta el estilo de la pagina principal y otras funciones
 - Se Actualiza el login
 
+---
+
+## [5/05/2025] 
+- Se crea la carpeta Model
+- Se empieza a crear la base de datos para registro e inicio de sesión
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
