@@ -12,9 +12,9 @@ $cr = $_POST['cor'];
 $dr = $_POST['cont'];
 
 $query = "INSERT INTO registro(`nombre`, `apellido`, `correo`, `contraseña`)
-VALUES('". mysql_real_escape_string($connection_obj, $ar)."', '". mysql_real_escape_string($connection_obj, $br) ."', '". mysql_real_escape_string($connection_obj, $cr) ."', '". mysql_real_escape_string($connection_obj, $dr) ."')";
+VALUES('". mysql_real_escape_string($connection_obj, $ar)."', '". mysql_real_escape_string($connection_obj, $br) ."', '". mysql_real_escape_string($connection_obj, $cr) ."', '". mysql_real_escape_string($connection_obj, $dr) ."')"
 
-$res = mysql_query($connection_obj, $query);
+$res = mysqli_query($connection_obj, $query);
 if($res){
     echo "<h4>Datos insertados correctamente</h4>";
 }else{
