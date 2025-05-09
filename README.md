@@ -1,9 +1,9 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 5 de mayo de 2025
-- Se crea la carpeta Model
-- Se empieza a crear la base de datos para registro e inicio de sesión
+## 📅 Actualización: 9 de mayo de 2025
+- Se crea la carpeta libs.
+- Se descarga PHPMailer desde Github.
   
 
 ## 📂 Contenido actual
@@ -27,7 +27,7 @@ _Proyecto Aula – Semestre 5_
 - [ ] Actualizar pagina de inicio y crear sistema de chat
   
 
-## 📅 Última actualización: 5 de mayo de 2025
+## 📅 Última actualización: 9 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
