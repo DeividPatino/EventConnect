@@ -12,6 +12,9 @@ $cr = $_POST['cor'];
 $dr = password_hash($_POST['cont'], PASSWORD_DEFAULT);
 $er = $_POST['tipo'];
 
+$checkQuery = "SELECT id FROM registro WHERE correo = '". mysqli_real_escape_string($connection_obj, $cr) ."'";
+$checkResult = mysqli_query($connection_obj, $checkQuery);
+
 $query = "INSERT INTO registro(`nombre`, `apellido`, `correo`, `contraseña`, `tipo`)
 VALUES('". mysqli_real_escape_string($connection_obj, $ar)."', '". mysqli_real_escape_string($connection_obj, $br) ."', '". mysqli_real_escape_string($connection_obj, $cr) ."', '". mysqli_real_escape_string($connection_obj, $dr) ."', '". mysqli_real_escape_string($connection_obj, $er) ."')";
 
