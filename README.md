@@ -3,7 +3,7 @@ _Proyecto Aula – Semestre 5_
 
 ## 📅 Actualización: 9 de mayo de 2025
 - Se crea la carpeta libs.
-- Se descarga PHPMailer desde Github.
+- Se borra PHPMailer desde Github [Borrado].
   
 
 ## 📂 Contenido actual
