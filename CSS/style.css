@@ -248,4 +248,22 @@ body::before {
     background-color: #2ea9a6;
     transform: scale(1.05);
   }
+
+  .form-registro select {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: 2px solid #f5f6f8;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+  }
   
+  .form-registro select:focus {
+    outline: none;
+    border-color: #35c3c1;
+    box-shadow: 0 0 8px rgba(53, 195, 193, 0.5);
+    transform: scale(1.03);
+  }
