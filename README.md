@@ -18,11 +18,13 @@ _Proyecto Aula – Semestre 5_
 
 ## 🧠 Tecnologías planeadas
 - **Frontend**: HTML, CSS, JavaScript.
+- **Backend**: PHP.
 - (Por definir)
 
 ## 📌 Próximos pasos
 - [x] Crear Paginas: Login, Registro y Principal
 - [ ] Crear base de datos (Login y registro)
+- [ ] Actualizar pagina de inicio y crear sistema de chat
   
 
 ## 📅 Última actualización: 5 de mayo de 2025
