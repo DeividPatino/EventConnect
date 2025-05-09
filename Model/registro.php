@@ -9,10 +9,11 @@ if(!$connection_obj) {
 $ar = $_POST['ur'];
 $br = $_POST['ar'];
 $cr = $_POST['cor'];
-$dr = $_POST['cont'];
+$dr = password_hash($_POST['cont'], PASSWORD_DEFAULT);
+$er = $_POST['tipo'];
 
-$query = "INSERT INTO registro(`nombre`, `apellido`, `correo`, `contraseña`)
-VALUES('". mysqli_real_escape_string($connection_obj, $ar)."', '". mysqli_real_escape_string($connection_obj, $br) ."', '". mysqli_real_escape_string($connection_obj, $cr) ."', '". mysqli_real_escape_string($connection_obj, $dr) ."')";
+$query = "INSERT INTO registro(`nombre`, `apellido`, `correo`, `contraseña`, `tipo`)
+VALUES('". mysqli_real_escape_string($connection_obj, $ar)."', '". mysqli_real_escape_string($connection_obj, $br) ."', '". mysqli_real_escape_string($connection_obj, $cr) ."', '". mysqli_real_escape_string($connection_obj, $dr) ."', '". mysqli_real_escape_string($connection_obj, $er) ."')";
 
 $res = mysqli_query($connection_obj, $query);
 if($res){
