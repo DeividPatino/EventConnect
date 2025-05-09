@@ -41,5 +41,11 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 - Se crea la carpeta Model
 - Se empieza a crear la base de datos para registro e inicio de sesión
 
+--
+
+## [9/05/2025]
+- Se crea la carpeta libs.
+- Se descarga PHPMailer desde Github.
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
