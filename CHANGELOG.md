@@ -52,6 +52,7 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 ## [10/05/2025]
 - Se crea la carpeta Controller.
 - Se ajustan los archivos PHP a Controller para validaciones.
+- Se configura mejor el model que se encargará de consultar o guardar datos en la base.
 
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
