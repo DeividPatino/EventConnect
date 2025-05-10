@@ -4,6 +4,7 @@ _Proyecto Aula – Semestre 5_
 ## 📅 Actualización: 10 de mayo de 2025
 - Se crea la carpeta Controller.
 - Se ajustan los archivos PHP a Controller para validaciones.
+- Se configura mejor el model que se encargará de consultar o guardar datos en la base.
   
 
 ## 📂 Contenido actual
