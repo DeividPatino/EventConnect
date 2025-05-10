@@ -47,5 +47,11 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 - Se crea la carpeta libs. [Borrado]
 - Se descarga PHPMailer desde Github. [Borrado]
 
+--
+
+## [10/05/2025]
+- Se crea la carpeta Controller.
+- Se ajustan los archivos PHP a Controller para validaciones.
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
