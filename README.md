@@ -24,7 +24,7 @@ _Proyecto Aula – Semestre 5_
 ## 📌 Próximos pasos
 - [x] Crear Paginas: Login, Registro y Principal
 - [ ] Crear base de datos (Login y registro)
-- [ ] Actualizar pagina de inicio y crear sistema de chat
+- [ ] Actualizar pagina de inicio
   
 
 ## 📅 Última actualización: 9 de mayo de 2025
