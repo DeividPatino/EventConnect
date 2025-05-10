@@ -25,7 +25,8 @@ if(mysqli_num_rows($checkResult) > 0) {
     
     $res = mysqli_query($connection_obj, $query);
     if($res){
-        echo "<h4>Datos insertados correctamente</h4>";
+        echo "";
+        header("refresh:2;url=../View/login.html");
     }else{
         echo "<h4>Error al insertar datos</h4>";
     }
