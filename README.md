@@ -26,11 +26,11 @@ _Proyecto Aula – Semestre 5_
 - [X] Crear base de datos (Login y registro) **(5/05/2025)**
 - [ ] Actualizar pagina de inicio
 - [ ] Página de detalle del evento
--Descripción completa del evento.
--Información del organizador.
--Ubicación en mapa.
--Lista de comentarios o reseñas de usuarios.
--Botón para “comprar” o “reservar” entrada.
+      -Descripción completa del evento.
+      -Información del organizador.
+      -Ubicación en mapa.
+      -Lista de comentarios o reseñas de usuarios.
+      -Botón para “comprar” o “reservar” entrada.
 - [ ] Sistema de compra / reserva de entradas
       -Selección de cantidad de entradas.
       -Cálculo automático del total.
@@ -51,9 +51,6 @@ _Proyecto Aula – Semestre 5_
       -Editar o eliminar eventos.
       -Ver listado de usuarios registrados.
       -Revisar reservas hechas por los usuarios.
-
-
-  
 
 ## 📅 Última actualización: 9 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
