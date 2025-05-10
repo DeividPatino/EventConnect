@@ -44,8 +44,8 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 --
 
 ## [9/05/2025]
-- Se crea la carpeta libs.
-- Se descarga PHPMailer desde Github.
+- Se crea la carpeta libs. [Borrado]
+- Se descarga PHPMailer desde Github. [Borrado]
 
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
