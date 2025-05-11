@@ -50,4 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+function updateCity() {
+  const citySelect = document.getElementById("city");
+  const cityName = citySelect.options[citySelect.selectedIndex].text;
+  document.getElementById("event-location").innerHTML = `Mirando eventos en <strong>${cityName}</strong>`;
+}
+
   
