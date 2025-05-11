@@ -5,6 +5,7 @@ _Proyecto Aula – Semestre 5_
 - Se crea la carpeta Controller.
 - Se ajustan los archivos PHP a Controller para validaciones.
 - Se configura mejor el model que se encargará de consultar o guardar datos en la base.
+- Se sube el archivo index,css,js (falta todavia por mejorar
   
 
 ## 📂 Contenido actual
