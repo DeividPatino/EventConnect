@@ -403,3 +403,42 @@ body {
   text-align: center;
 }
 
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.user-name {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #a7e3f3;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #d0efff;
+}
+
+.hidden {
+  display: none;
+}

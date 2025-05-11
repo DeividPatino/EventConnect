@@ -22,4 +22,3 @@ if ($row && password_verify($contrasena, $row['contraseña'])) {
 
 $model->cerrarConexion();
 ?>
-
