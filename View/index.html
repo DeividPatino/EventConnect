@@ -1,38 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EventConnect</title>
-  <link rel="stylesheet" href="../CSS/style.css"/>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <script src="auth.js" defer></script>
   <script src="utils.js" defer></script>
 </head>
-<body class="landing-body">
-  <div class="landing-container">
-    <header class="landing-header">
-      <h1>🎉 EventConnect</h1>
-      <p>Conectando organizadores de eventos con los mejores proveedores</p>
-      <div id="welcome-msg"></div>
-    </header>
-
-    <main class="landing-main">
-      <img src="https://www.svgrepo.com/show/379005/event.svg" alt="Eventos" class="landing-illustration" />
-      <div class="landing-buttons" id="auth-buttons">
-        <a href="login.html" class="btn btn-primary">Iniciar Sesión</a>
-        <a href="Registro.html" class="btn btn-secondary">Registrarse</a>
-      </div>
-      <div class="landing-buttons" id="logout-button" style="display: none;">
-        <button class="btn btn-secondary" onclick="logout()">Cerrar sesión</button>
-      </div>
-    </main>
+<body>
+  
+  <header class="navbar">
+    <div class="logo">EventConnect</div>
+    <input type="text" class="search-bar" placeholder="Buscar eventos" />
     
-    <footer class="landing-footer">
-      <p>&copy; 2025 EventConnect. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+    <nav class="nav-links">
+      <a href="#">Crear eventos</a>
+      <a href="#">Centro de ayuda</a>
+      <a href="#">Mis entradas</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="Registro.html">Registrarse</a>
+    </nav>
+  </header>
 
-  <script>
-    document.addEventListener('DOMContentLoaded'), () => {
-      const user = getCurrentUser();
-    }
+  <main class="main-section">
+    <div class="hero">
+        <div class="hero-text">
+            <h1><span class="highlight">Haz lo que</span><br>te apasiona</h1>
+        </div>
+        <img src="https://www.svgrepo.com/show/379005/event.svg" alt="Evento destacado" class="hero-image" />
+    </div>
+
+    <section class="categories">
+        <div class="category" data-filter="music">🎵 Música</div>
+        <div class="category" data-filter="nightlife">🌃 Vida nocturna</div>
+        <div class="category" data-filter="art">🎭 Artes</div>
+        <div class="category" data-filter="vacation">✈️ Vacaciones</div>
+        <div class="category" data-filter="dating">💘 Citas</div>
+        <div class="category" data-filter="hobbies">🎮 Aficiones</div>
+        <div class="category" data-filter="business">💼 Negocios</div>
+        <div class="category" data-filter="gastronomy">🍔 Gastronomía</div>
+    </section>
+
+
+    <section class="filters">
+        <div class="location-selector">
+            <label for="city">Mirando eventos en:</label>
+            <select name="city" id="city">
+                <option value="cartagena">Cartagena</option>
+                <option value="bogota">Bogotá</option>
+                <option value="medellin">Medellín</option>
+                <option value="cali">Cali</option>
+                <option value="barranquilla">Barranquilla</option>
+                <option value="bucaramanga">Bucaramanga</option>
+                <option value="manizales">Manizales</option>
+                <option value="pereira">Pereira</option>
+                <option value="cartago">Cartago</option>
+                <option value="santa_marta">Santa Marta</option>
+            </select>
+        </div>
+        <div class="filter-buttons">
+            <button data-filter="all">Todos</button>
+            <button data-filter="for-you">Para ti</button>
+            <button data-filter="today">Hoy</button>
+            <button data-filter="weekend">Este fin de semana</button>
+            <button data-filter="free">Gratis</button>
+            <button data-filter="music">Música</button>
+            <button data-filter="gastronomy">Gastronomía</button>
+        </div>
+    </section>
+
+    <section id="event-container" class="event-container">
+  
+        <select id="city">
+          <option value="bodas">Bodas</option>
+          <option value="fiestas">Fiestas</option>
+          <option value="corporativos">Corporativos</option>
+        </select>
+        
+        <div id="selected-city"></div>
+        <div id="event-container"></div>
+        
+    </section>
+
+  </main>
+
+  
+  <footer class="footer">
+    <p>&copy; 2025 EventConnect. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
