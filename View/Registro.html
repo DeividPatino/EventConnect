@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicar Evento</title>
+    <title>EventConnect</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Special+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="../Controller/PublicarEventoCtrl.php" method="post" enctype="multipart/form-data" class="form-publicar-evento">
-        <h2>Publicar Nuevo Evento</h2>
-
-        Título del evento:<br>
-        <input type="text" name="titulo" required><br><br>
-
-        Descripción:<br>
-        <textarea name="descripcion" rows="5" required></textarea><br><br>
-
-        Fecha del evento:<br>
-        <input type="date" name="fecha" required><br><br>
-
-        Hora:<br>
-        <input type="time" name="hora" required><br><br>
-
-        Lugar:<br>
-        <input type="text" name="lugar" required><br><br>
-
-        Imagen de portada:<br>
-        <input type="file" name="imagen_portada" accept="image/*" required><br><br>
-
-        <input type="submit" value="Publicar Evento">
+    <form action="../Controller/RegistroCtrl.php" method="post" class="form-registro">
+            <h2>Crear una cuenta nueva</h2>
+            Nombre
+            <input type="text" name="ur" required><br><br>
+            Apellido
+            <input type="text" name="ar" required><br><br>
+            Correo
+            <input type="email" name="cor" required><br><br>
+            Contraseña
+            <input type="password" name="cont" id="password" required><br><br>
+            <select name="tipo" required>
+                <option value="cliente">Cliente</option>
+                <option value="proveedor">Proveedor</option>
+            </select><br><br>            
+            <input type="submit" value="Registrar">
     </form>
 </body>
 </html>
