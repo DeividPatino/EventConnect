@@ -60,5 +60,10 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 -Se sube el archivo index,css,js (falta todavia por mejorar)
 -se actualiza el archivo index y el utils.js
 
+---
+
+## [16/05/2025]
+- Se crea el controller para cerrar sesion.
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
