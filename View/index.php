@@ -21,7 +21,7 @@ session_start();
     <nav class="nav-links">
       <?php if (isset($_SESSION['id_usuario'])): ?>
         <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
-          <a href="subireventos.html" id="crear-evento">Crear eventos</a>
+          <a href="publicareventos.html" id="crear-evento">Crear eventos</a>
         <?php endif; ?>
         <a href="#">Centro de ayuda</a>
         <a href="#">Mis entradas</a>
