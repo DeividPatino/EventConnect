@@ -54,5 +54,11 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 - Se ajustan los archivos PHP a Controller para validaciones.
 - Se configura mejor el model que se encargará de consultar o guardar datos en la base.
 
+---
+
+## [10/05/2025]
+-Se sube el archivo index,css,js (falta todavia por mejorar)
+-se actualiza el archivo index y el utils.js
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
