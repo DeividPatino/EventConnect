@@ -7,7 +7,8 @@ _Proyecto Aula – Semestre 5_
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
 - 📁 Estructura inicial del repositorio
-- 📁 Carpeta `CSS/`, `JS/`, `Model`
+- 📁 Carpeta
+   - `CSS/`, `JS/`, `Model`, `Controller`.
 
 ## 📁 Estado del Proyecto
 - 🚀 Repositorio creado y documento inicial del proyecto agregado.
