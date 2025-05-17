@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,12 +19,22 @@
     <input type="text" class="search-bar" placeholder="Buscar eventos" />
     
     <nav class="nav-links">
-      <a href="subireventos.html" id="crear-evento">Crear eventos</a>
-      <a href="#">Centro de ayuda</a>
-      <a href="#">Mis entradas</a>
-      <a href="#">Editar perfil</a> 
-      <a href="login.html">Iniciar sesión</a>
-      <a href="Registro.html">Registrarse</a>
+      <?php if (isset($_SESSION['id_usuario'])): ?>
+        <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
+          <a href="subireventos.html" id="crear-evento">Crear eventos</a>
+        <?php endif; ?>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Mis entradas</a>
+        <a href="perfil.php">Editar perfil (<?= htmlspecialchars($_SESSION['nombre']) ?>)</a>
+        <a href="../Controller/CerrarsesionCtrl.php">Cerrar sesión</a>
+      <?php else: ?>
+        <a href="subireventos.html" id="crear-evento">Crear eventos</a>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Mis entradas</a>
+        <a href="#">Editar perfil</a>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="Registro.html">Registrarse</a>
+      <?php endif; ?>
     </nav>
   </header>
 
@@ -65,12 +78,11 @@
         <button data-filter="today">Hoy</button>
         <button data-filter="weekend">Este fin de semana</button>
         <button data-filter="free">Gratis</button>
-     
       </div>
     </section>
 
     <section id="event-container" class="event-container">
-  
+      <!-- Aquí se cargarán los eventos dinámicamente con JavaScript -->
     </section>
   </main>
 

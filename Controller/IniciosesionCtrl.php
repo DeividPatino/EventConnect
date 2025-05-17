@@ -15,7 +15,7 @@ if ($row && password_verify($contrasena, $row['contraseña'])) {
     $_SESSION['nombre'] = $row['nombre'];
 
     echo "";
-    header("Location: ../View/index.html");
+    header("Location: ../View/index.php");
 } else {
     echo "<h4>Error: Usuario o contraseña incorrectos.</h4>";
 }

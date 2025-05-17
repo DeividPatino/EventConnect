@@ -56,4 +56,15 @@ function updateCity() {
   document.getElementById("event-location").innerHTML = `Mirando eventos en <strong>${cityName}</strong>`;
 }
 
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const crearEventoLink = document.getElementById("crear-evento");
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user) {
+    // Si no hay usuario logueado, ocultar el botón "Crear eventos"
+    if (crearEventoLink) {
+      crearEventoLink.style.display = "none";
+    }
+  }
+});
+
