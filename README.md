@@ -2,9 +2,8 @@
 _Proyecto Aula – Semestre 5_
 
 ## 📅 Actualización: 16 de mayo de 2025
-
+- Se crea el controller para cerrar sesion.
   
-
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
 - 📁 Estructura inicial del repositorio
@@ -25,7 +24,7 @@ _Proyecto Aula – Semestre 5_
 - [X] Crear base de datos (Login y registro) **(5/05/2025)**
 - [ ] Actualizar pagina de inicio
 
-## 📅 Última actualización: 12 de mayo de 2025
+## 📅 Última actualización: 16 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
