@@ -28,32 +28,6 @@ _Proyecto Aula – Semestre 5_
 - [X] Crear Paginas: Login, Registro y Principal
 - [X] Crear base de datos (Login y registro) **(5/05/2025)**
 - [ ] Actualizar pagina de inicio
-- [ ] Página de detalle del evento
-      -Descripción completa del evento.
-      -Información del organizador.
-      -Ubicación en mapa.
-      -Lista de comentarios o reseñas de usuarios.
-      -Botón para “comprar” o “reservar” entrada.
-- [ ] Sistema de compra / reserva de entradas
-      -Selección de cantidad de entradas.
-      -Cálculo automático del total.
-      -Confirmación de compra (puedes simular pago, o integrar algo como PayPal en el futuro).
-      -Generación de ticket o comprobante de reserva.
-- [ ] Panel de usuario
-      -Mis eventos comprados o reservados.
-      -Cancelar reservas.
-      -Ver entradas pasadas.
-      -Editar perfil (nombre, correo, contraseña, foto de perfil).
-- [ ] Panel de administrador / organizador
-      -Crear nuevos eventos.
-      -Editar o eliminar eventos.
-      -Ver listado de usuarios registrados.
-      -Revisar reservas hechas por los usuarios.
-- [ ] Panel de administrador / organizador
-      -Crear nuevos eventos.
-      -Editar o eliminar eventos.
-      -Ver listado de usuarios registrados.
-      -Revisar reservas hechas por los usuarios.
 
 ## 📅 Última actualización: 9 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
