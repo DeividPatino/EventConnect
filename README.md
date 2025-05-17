@@ -1,12 +1,8 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 12 de mayo de 2025
-- Se crea la carpeta Controller.
-- Se ajustan los archivos PHP a Controller para validaciones.
-- Se configura mejor el model que se encargará de consultar o guardar datos en la base.
-- Se sube el archivo index,css,js (falta todavia por mejorar)
-- se actualiza el archivo index y el utils.js
+## 📅 Actualización: 16 de mayo de 2025
+
   
 
 ## 📂 Contenido actual
@@ -29,7 +25,7 @@ _Proyecto Aula – Semestre 5_
 - [X] Crear base de datos (Login y registro) **(5/05/2025)**
 - [ ] Actualizar pagina de inicio
 
-## 📅 Última actualización: 9 de mayo de 2025
+## 📅 Última actualización: 12 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
