@@ -50,7 +50,7 @@ if (!$evento || $evento['id_proveedor'] != $_SESSION['id_usuario']) {
         </select><br><br>
 
         Ciudad:<br>
-        <select name="Ciudad" required>
+        <select name="ciudad" required>
             <option value="">-- Selecciona una ciudad --</option>
             <option value="Barranquilla" <?= $evento['lugar'] == 'Barranquilla' ? 'selected' : '' ?>>Barranquilla</option>
             <option value="Cartagena" <?= $evento['lugar'] == 'Cartagena' ? 'selected' : '' ?>>Cartagena</option>

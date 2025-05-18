@@ -6,10 +6,10 @@ session_start();
 $model = new EventoModel();
 
 $id_evento = $_POST['id_evento'];
-$nombre = $_POST['nombre'];
+$nombre = $_POST['titulo'];
 $descripcion = $_POST['descripcion'];
-$categoria = $_POST['categoria'];
-$lugar = $_POST['lugar'];
+$categoria = $_POST['Categoria'];
+$lugar = $_POST['ciudad'];
 $precio = $_POST['precio'];
 
 $imagen_nueva = '';
@@ -48,7 +48,7 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
 }
 
 if ($model->editarEvento($id_evento, $nombre, $descripcion, $categoria, $lugar, $precio, $imagen_nueva)) {
-    header("Location: ../View/Proveedores/proveedor_panel.php?actualizado=1");
+    header("Location: ../../View/Proveedores/proveedor_panel.php?actualizado=1");
     exit;
 } else {
     echo "<h4>Error al actualizar el servicio.</h4>";
