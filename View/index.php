@@ -11,9 +11,9 @@ $model->cerrarConexion();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EventConnect</title>
-  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="auth.js" defer></script>
+  <link rel="stylesheet" href="../CSS/style.css" />
   <script src="utils.js" defer></script>
 </head>
 <body>
@@ -81,32 +81,38 @@ $model->cerrarConexion();
         <button data-filter="free">Gratis</button>
       </div>
     </section>
-
-    <section class="event-container">
-      <?php if (!empty($eventos)): ?>
-        <?php foreach ($eventos as $evento): ?>
-          <div class="evento-carta">
-            <h3><?= htmlspecialchars($evento['nombre']) ?></h3>
-            <p><strong>Descripción:</strong> <?= nl2br(htmlspecialchars($evento['descripcion'])) ?></p>
-            <p><strong>Categoría:</strong> <?= htmlspecialchars($evento['categoria']) ?></p>
-            <p><strong>Ciudad:</strong> <?= htmlspecialchars($evento['lugar']) ?></p>
-            <p><strong>Precio:</strong> <?= number_format($evento['precio'], 0, ',', '.') ?> COP</p>
-
-            <?php if (!empty($evento['imagen'])): ?>
-              <img src="../Uploads/<?= htmlspecialchars($evento['imagen']) ?>" alt="Imagen del evento" width="250" style="border-radius: 10px;">
-            <?php endif; ?>
+    
+    <div class="container mt-4">
+  <div class="row">
+    <?php foreach ($eventos as $e): ?>
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <?php if (!empty($e['imagen'])): ?>
+            <img src="../Uploads/<?= htmlspecialchars($e['imagen']) ?>" class="card-img-top" style="height: 150px; object-fit: cover;" alt="Imagen del evento">
+          <?php endif; ?>
+          <div class="card-body p-2">
+            <h6 class="card-title"><?= htmlspecialchars($e['nombre']) ?></h6>
+            <p class="mb-1"><strong>Ciudad:</strong> <?= htmlspecialchars($e['lugar']) ?></p>
+            <p class="mb-1"><strong>Categoría:</strong> <?= htmlspecialchars($e['categoria']) ?></p>
+            <p class="mb-1"><strong>Precio:</strong> <?= number_format($e['precio'], 0, ',', '.') ?> COP</p>
           </div>
-        <?php endforeach; ?>
-      <?php else: ?>
-        <p>No hay eventos disponibles en este momento.</p>
-      <?php endif; ?>
-    </section>
-  </main>
+          <div class="card-footer p-2 d-flex justify-content-between">
+            <a href="#" class="btn btn-sm btn-outline-primary">Ver</a>
+            <a href="#" class="btn btn-sm btn-outline-secondary">Editar</a>
+          </div>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</div>
 
+    
+  </main>
+        
   <footer class="footer">
     <p>&copy; 2025 EventConnect. Todos los derechos reservados.</p>
   </footer>
-
+  <script src="../JS/Bootstrap/bootstrap.bundle.min.js"></script>
   <script src="script.js" defer></script>
 </body>
 </html>
