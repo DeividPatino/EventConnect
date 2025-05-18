@@ -28,10 +28,7 @@ session_start();
         <a href="perfil.php">Editar perfil (<?= htmlspecialchars($_SESSION['nombre']) ?>)</a>
         <a href="../Controller/CerrarsesionCtrl.php">Cerrar sesión</a>
       <?php else: ?>
-        <a href="publicareventos.html" id="crear-evento">Crear eventos</a>
         <a href="#">Centro de ayuda</a>
-        <a href="#">Mis entradas</a>
-        <a href="#">Editar perfil</a>
         <a href="login.html">Iniciar sesión</a>
         <a href="Registro.html">Registrarse</a>
       <?php endif; ?>
