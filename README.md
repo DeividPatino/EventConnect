@@ -1,8 +1,8 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 16 de mayo de 2025
-- Se crea el controller para cerrar sesion.
+## 📅 Actualización: 17 de mayo de 2025
+- Panel para crear eventos funcional
   
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
