@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../Model/EventoModel.php';
+require_once '../../Model/EventoModel.php';
 
 $model = new EventoModel();
 
@@ -22,10 +22,10 @@ $id_proveedor = $_SESSION['id_usuario'] ?? 0;
 $imagen = null;
 if (!empty($_FILES['imagen']['name'])) {
     $nombreImagen = basename($_FILES['imagen']['name']);
-    $rutaDestino = "../uploads/" . $nombreImagen;
+    $rutaDestino = "../../Uploads/" . $nombreImagen;
 
-    if (!file_exists('../uploads')) {
-        mkdir('../uploads', 0777, true);
+    if (!file_exists('../../Uploads')) {
+        mkdir('../../Uploads', 0777, true);
     }
 
     if (move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaDestino)) {

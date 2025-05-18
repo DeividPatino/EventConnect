@@ -21,9 +21,9 @@ session_start();
     <nav class="nav-links">
       <?php if (isset($_SESSION['id_usuario'])): ?>
         <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
-          <a href="publicareventos.html" id="crear-evento">Crear eventos</a>
+          <a href="../View/Proveedores/publicareventos.html" id="crear-evento">Crear eventos</a>
         <?php endif; ?>
-        <a href="#">Centro de ayuda</a>
+        <a href="../View/Proveedores/proovedor_panel.php">Centro de ayuda</a>
         <a href="#">Mis entradas</a>
         <a href="perfil.php">Editar perfil (<?= htmlspecialchars($_SESSION['nombre']) ?>)</a>
         <a href="../Controller/CerrarsesionCtrl.php">Cerrar sesión</a>
