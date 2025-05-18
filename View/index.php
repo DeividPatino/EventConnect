@@ -98,7 +98,6 @@ $model->cerrarConexion();
           </div>
           <div class="card-footer p-2 d-flex justify-content-between">
             <a href="#" class="btn btn-sm btn-outline-primary">Ver</a>
-            <a href="#" class="btn btn-sm btn-outline-secondary">Editar</a>
           </div>
         </div>
       </div>
