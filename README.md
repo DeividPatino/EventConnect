@@ -2,6 +2,7 @@
 _Proyecto Aula – Semestre 5_
 
 ## 📅 Actualización: 18 de mayo de 2025
+-Se crea panel para poder editar evento
   
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
@@ -44,5 +45,6 @@ Este proyecto es de uso académico. Todos los derechos reservados al grupo desar
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white" />
 </p>
 
