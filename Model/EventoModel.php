@@ -57,6 +57,11 @@ class EventoModel {
         return mysqli_query($this->conn, $query);
     }
 
+    public function obtenerTodosLosEventos() {
+        $query = "SELECT * FROM eventos ORDER BY id_evento DESC";
+        $result = mysqli_query($this->conn, $query);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
 
     public function cerrarConexion() {
         mysqli_close($this->conn);

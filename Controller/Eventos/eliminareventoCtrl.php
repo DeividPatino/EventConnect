@@ -10,7 +10,7 @@ if (!isset($_SESSION['id_usuario']) || $_SESSION['tipo'] !== 'proveedor') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id_evento = intval($_POST['id']);
     $id_proveedor = $_SESSION['id_usuario'];
-
+}
     $model = new EventoModel();
 
     // Obtener el servicio para verificar que pertenece al proveedor
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     if ($evento && $evento['id_proveedor'] == $id_proveedor) {
         // Eliminar imagen del servidor si existe
         if (!empty($evento['imagen'])) {
-            $ruta_imagen = '../uploads/' . $evento['imagen'];
+            $ruta_imagen = '../../Uploads/' . $evento['imagen'];
             if (file_exists($ruta_imagen)) {
                 unlink($ruta_imagen);
             }
@@ -32,9 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
         } else {
             echo "Error al eliminar el servicio.";
         }
-    } else {
-        echo "No tienes permiso para eliminar este servicio.";
-    }
 
     $model->cerrarConexion();
 } else {

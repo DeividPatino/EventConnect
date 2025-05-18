@@ -1,5 +1,9 @@
 <?php
 session_start();
+require_once '../Model/EventoModel.php';
+$model = new EventoModel();
+$eventos = $model->obtenerTodosLosEventos(); // asegúrate de tener este método en EventoModel
+$model->cerrarConexion();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -78,8 +82,24 @@ session_start();
       </div>
     </section>
 
-    <section id="event-container" class="event-container">
-      <!-- Aquí se cargarán los eventos dinámicamente con JavaScript -->
+    <section class="event-container">
+      <?php if (!empty($eventos)): ?>
+        <?php foreach ($eventos as $evento): ?>
+          <div class="evento-carta">
+            <h3><?= htmlspecialchars($evento['nombre']) ?></h3>
+            <p><strong>Descripción:</strong> <?= nl2br(htmlspecialchars($evento['descripcion'])) ?></p>
+            <p><strong>Categoría:</strong> <?= htmlspecialchars($evento['categoria']) ?></p>
+            <p><strong>Ciudad:</strong> <?= htmlspecialchars($evento['lugar']) ?></p>
+            <p><strong>Precio:</strong> <?= number_format($evento['precio'], 0, ',', '.') ?> COP</p>
+
+            <?php if (!empty($evento['imagen'])): ?>
+              <img src="../Uploads/<?= htmlspecialchars($evento['imagen']) ?>" alt="Imagen del evento" width="250" style="border-radius: 10px;">
+            <?php endif; ?>
+          </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>No hay eventos disponibles en este momento.</p>
+      <?php endif; ?>
     </section>
   </main>
 
