@@ -65,5 +65,10 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 ## [16/05/2025]
 - Se crea el controller para cerrar sesion.
 
+---
+
+## [17/05/2025]
+- Panel para crear eventos funcional
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
