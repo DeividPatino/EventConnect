@@ -1,14 +1,14 @@
 # 🎉 EventConnect  
 _Proyecto Aula – Semestre 5_
 
-## 📅 Actualización: 16 de mayo de 2025
-
+## 📅 Actualización: 17 de mayo de 2025
+- Panel para crear eventos funcional
   
-
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
 - 📁 Estructura inicial del repositorio
-- 📁 Carpeta `CSS/`, `JS/`, `Model`
+- 📁 Carpeta
+   - `CSS/`, `JS/`, `Model`, `Controller`.
 
 ## 📁 Estado del Proyecto
 - 🚀 Repositorio creado y documento inicial del proyecto agregado.
@@ -24,8 +24,10 @@ _Proyecto Aula – Semestre 5_
 - [X] Crear Paginas: Login, Registro y Principal
 - [X] Crear base de datos (Login y registro) **(5/05/2025)**
 - [ ] Actualizar pagina de inicio
+- [ ] Crear panel para subir eventos.
+- [ ] Configurar paneles de proveedores.
 
-## 📅 Última actualización: 12 de mayo de 2025
+## 📅 Última actualización: 16 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
 
 ## 👥 Autores
