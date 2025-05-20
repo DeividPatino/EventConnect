@@ -26,6 +26,7 @@ $model->cerrarConexion();
       <?php if (isset($_SESSION['id_usuario'])): ?>
         <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
           <a href="../View/Proveedores/publicareventos.html" id="crear-evento">Crear eventos</a>
+          <a href="#" id="Solicitudes">Solicitudes</a>
         <?php endif; ?>
         <a href="../View/Proveedores/proovedor_panel.php">Centro de ayuda</a>
         <a href="#">Mis entradas</a>
@@ -96,16 +97,6 @@ $model->cerrarConexion();
     <?php endforeach; ?>
   </div>
 </div>
-
-
-      <div class="filter-buttons">
-        <button data-filter="all">Todos</button>
-        <button data-filter="for-you">Para ti</button>
-        <button data-filter="today">Hoy</button>
-        <button data-filter="weekend">Este fin de semana</button>
-        <button data-filter="free">Gratis</button>
-      </div>
-    </section>
     
   </main>
         
