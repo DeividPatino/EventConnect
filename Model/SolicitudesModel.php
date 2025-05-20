@@ -15,6 +15,23 @@ class SolicitudesModel {
     return $stmt->execute([$idCliente, $idEvento, $mensaje]);
   }
 
+  public function obtenerSolicitudesPorProveedor($idProveedor) {
+  $sql = "SELECT 
+            s.id,
+            u.nombre AS nombre_cliente,
+            e.nombre AS nombre_evento,
+            s.mensaje,
+            s.fecha_solicitud,
+            s.estado
+          FROM solicitudes s
+          JOIN registro r ON s.id_cliente = r.id
+          JOIN eventos e ON s.id_evento = e.id_evento
+          WHERE e.id_proveedor = ?";
+  $stmt = $this->db->prepare($sql);
+  $stmt->execute([$idProveedor]);
+  return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
   public function cerrarConexion() {
         mysqli_close($this->conn);
     }
