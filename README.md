@@ -2,7 +2,8 @@
 _Proyecto Aula – Semestre 5_
 
 ## 📅 Actualización: 18 de mayo de 2025
--Se crea panel para poder editar evento
+-Se crea panel para poder editar evento.
+-Se agrega Bootstrap al proyecto.
   
 ## 📂 Contenido actual
 - 📄 Documento base del proyecto 
