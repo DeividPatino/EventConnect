@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventConnect</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Special+Gothic&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventConnect - Registro</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Special+Gothic&display=swap" rel="stylesheet">
 </head>
-<body>
-    <form action="../Controller/RegistroCtrl.php" method="post" class="form-registro">
-            <h2>Crear una cuenta nueva</h2>
-            Nombre
-            <input type="text" name="ur" required><br><br>
-            Apellido
-            <input type="text" name="ar" required><br><br>
-            Correo
-            <input type="email" name="cor" required><br><br>
-            Contraseña
-            <input type="password" name="cont" id="password" required><br><br>
-            <select name="tipo" required>
-                <option value="cliente">Cliente</option>
-                <option value="proveedor">Proveedor</option>
-            </select><br><br>            
-            <input type="submit" value="Registrar">
-    </form>
+<body class="form-page">
+  <form action="../Controller/RegistroCtrl.php" method="post" class="form-registro">
+    <h2>Crear una cuenta nueva</h2>
+
+    <input type="text" name="ur" placeholder="Nombre" required />
+
+    <input type="text" name="ar" placeholder="Apellido" required />
+
+    <input type="email" name="cor" placeholder="Correo electrónico" required />
+
+    <input type="password" name="cont" placeholder="Contraseña" id="password" required />
+
+    <select name="tipo" required>
+      <option value="">Selecciona tipo de usuario</option>
+      <option value="cliente">Cliente</option>
+      <option value="proveedor">Proveedor</option>
+    </select>
+
+    <input type="submit" value="Registrar" />
+    
+    <div style="text-align: center; margin-top: 1em;">
+      <a href="login.html" style="color: #000000; text-decoration: none;">¿Ya tienes una cuenta? Inicia sesión</a>
+    </div>
+  </form>
 </body>
 </html>
