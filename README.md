@@ -28,7 +28,7 @@ _Proyecto Aula – Semestre 5_
 - [X] Crear base de datos (Login y registro) **(5/05/2025)**
 - [ ] Actualizar pagina de inicio
 - [X] Crear panel para subir eventos. **(17/05/2025)**
-- [ ] Configurar paneles de proveedores.
+- [X] Configurar paneles de proveedores. **(20/05/2025)**
 
 ## 📅 Última actualización: 18 de mayo de 2025
 📘 [Ver historial de actualizaciones](CHANGELOG.md)
