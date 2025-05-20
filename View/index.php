@@ -27,8 +27,8 @@ $model->cerrarConexion();
         <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
           <a href="../View/Proveedores/publicareventos.html" id="crear-evento">Crear eventos</a>
          <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'proveedor'): ?>
-  <a href="../../../Controller/VerSolicitudes.php">Ver solicitudes</a>
-<?php endif; ?>
+          <a href="../Controller/Solicitudes/VerSolicitudes.php">Ver solicitudes</a>
+         <?php endif; ?>
         <?php endif; ?>
         <a href="../View/Proveedores/proovedor_panel.php">Centro de ayuda</a>
         <a href="#">Mis entradas</a>

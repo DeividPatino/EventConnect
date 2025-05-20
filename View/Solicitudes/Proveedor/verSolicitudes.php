@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Solicitudes Recibidas</title>
- </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes recibidas</title>
+  <link rel="stylesheet" href="../../CSS/style.css">
+</head>
 <body>
-  <h1>Solicitudes Recibidas</h1>
+  <h1 class="section-title">Solicitudes Recibidas</h1>
 
   <?php if (count($solicitudes) > 0): ?>
-    <table>
+    <table class="event-table">
       <thead>
         <tr>
           <th>Cliente</th>

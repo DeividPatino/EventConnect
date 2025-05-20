@@ -23,6 +23,30 @@ body {
   overflow-x: hidden;
 }
 
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.event-table th, .event-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.event-table th {
+  background-color: #e91e63;
+  color: white;
+}
+
+.event-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -443,13 +467,3 @@ body {
   display: none;
 }
 
-#map {
-    height: 250px; /* puedes ajustar a 200 o 180 si quieres menos */
-    width: 90%; /* más estrecho que el 100% */
-    max-width: 600px; /* límite de anchura en pantallas grandes */
-    margin: 10px auto; /* centrado */
-    display: none;
-    border: 1px solid #000;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
