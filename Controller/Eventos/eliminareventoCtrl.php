@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
 
         // Eliminar de la base de datos
         if ($model->eliminarEvento($id_evento)) {
-            header("Location: ../View/Proveedores/proveedor_panel.php?eliminado=1");
+            header("Location: ../../View/Proveedores/proveedor_panel.php?eliminado=1");
             exit;
         } else {
             echo "Error al eliminar el servicio.";

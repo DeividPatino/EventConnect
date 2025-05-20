@@ -35,7 +35,7 @@ if (!empty($_FILES['imagen']['name'])) {
 
 // Publicar el servicio
 if ($model->publicarevento($nombre, $descripcion, $categoria, $lugar, $precio, $imagen, $id_proveedor)) {
-    header("Location: ../View/index.php");
+    header("Location: ../../View/index.php");
 } else {
     echo "<h4>Error al publicar el servicio</h4>";
 }

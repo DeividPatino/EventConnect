@@ -73,16 +73,8 @@ $model->cerrarConexion();
           <option value="santa_marta">Santa Marta</option>
         </select>
       </div>
-      <div class="filter-buttons">
-        <button data-filter="all">Todos</button>
-        <button data-filter="for-you">Para ti</button>
-        <button data-filter="today">Hoy</button>
-        <button data-filter="weekend">Este fin de semana</button>
-        <button data-filter="free">Gratis</button>
-      </div>
-    </section>
-    
-    <div class="container mt-4">
+
+        <div class="container mt-4">
   <div class="row">
     <?php foreach ($eventos as $e): ?>
       <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
@@ -97,7 +89,7 @@ $model->cerrarConexion();
             <p class="mb-1"><strong>Precio:</strong> <?= number_format($e['precio'], 0, ',', '.') ?> COP</p>
           </div>
           <div class="card-footer p-2 d-flex justify-content-between">
-            <a href="#" class="btn btn-sm btn-outline-primary">Ver</a>
+            <a href="detalleseventos.php?id=<?= $e['id_evento'] ?>" class="btn btn-sm btn-outline-primary">Ver</a>
           </div>
         </div>
       </div>
@@ -105,6 +97,15 @@ $model->cerrarConexion();
   </div>
 </div>
 
+
+      <div class="filter-buttons">
+        <button data-filter="all">Todos</button>
+        <button data-filter="for-you">Para ti</button>
+        <button data-filter="today">Hoy</button>
+        <button data-filter="weekend">Este fin de semana</button>
+        <button data-filter="free">Gratis</button>
+      </div>
+    </section>
     
   </main>
         
