@@ -70,5 +70,11 @@ Registro de cambios realizados al proyecto durante el desarrollo.
 ## [17/05/2025]
 - Panel para crear eventos funcional
 
+---
+
+## [20/05/2025]
+-Se crea panel para poder editar evento.
+-Se agrega Bootstrap al proyecto.
+
 ## [Próximas entradas...]
 - Aquí irán futuras actualizaciones con fecha y descripción.
