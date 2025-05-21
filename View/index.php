@@ -45,7 +45,7 @@ $model->cerrarConexion();
   <main class="main-section">
     <div class="hero">
       <div class="hero-text">
-        <h1><span class="highlight">Haz lo que</span><br>te apasiona</h1>
+        <h1><span class="highlight"></span><br>EL FUTURO DE LOS EVENTOS COMIENZA AQUÌ</h1>
       </div>
       <img src="https://www.svgrepo.com/show/379005/event.svg" alt="Evento destacado" class="hero-image" />
     </div>
