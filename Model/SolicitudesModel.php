@@ -16,7 +16,7 @@ class SolicitudesModel {
   }
 
   public function obtenerSolicitudesPorProveedor($idProveedor) {
-  $sql = "SELECT 
+    $sql = "SELECT 
             s.id,
             r.nombre AS nombre_cliente,
             e.nombre AS nombre_evento,
@@ -28,15 +28,34 @@ class SolicitudesModel {
           JOIN eventos e ON s.id_evento = e.id_evento
           WHERE e.id_proveedor = ?";
   
-  $stmt = $this->conn->prepare($sql);
-  $stmt->bind_param("i", $idProveedor);
-  $stmt->execute();
-  $resultado = $stmt->get_result();
-  return $resultado->fetch_all(MYSQLI_ASSOC);
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("i", $idProveedor);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+  }
+
+  public function verificarPropiedadSolicitud($idSolicitud, $idProveedor) {
+    $sql = "SELECT COUNT(*) as total FROM solicitudes s
+            JOIN eventos e ON s.id_evento = e.id_evento
+            WHERE s.id = ? AND e.id_proveedor = ?";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("ii", $idSolicitud, $idProveedor);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $fila = $resultado->fetch_assoc();
+    return $fila['total'] > 0;
 }
 
+
+public function cambiarEstadoSolicitud($idSolicitud, $nuevoEstado) {
+    $sql = "UPDATE solicitudes SET estado = ? WHERE id = ?";
+    $stmt = $this->conn->prepare($sql);
+    return $stmt->execute([$nuevoEstado, $idSolicitud]);
+}
 
   public function cerrarConexion() {
         mysqli_close($this->conn);
     }
 }
+?>

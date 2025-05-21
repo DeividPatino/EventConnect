@@ -418,3 +418,40 @@ body {
   background-color: #2ea9a6;
   transform: scale(1.05);
 }
+
+.boton {
+  padding: 8px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para botón de aceptar */
+.boton-aceptar {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.boton-aceptar:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para botón de rechazar */
+.boton-rechazar {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.boton-rechazar:hover {
+  background-color: #e53935;
+}
+
+.boton svg {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  fill: white; /* si quieres que el icono tenga color */
+}
