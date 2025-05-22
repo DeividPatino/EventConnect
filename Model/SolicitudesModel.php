@@ -22,6 +22,7 @@ class SolicitudesModel {
             e.nombre AS nombre_evento,
             s.mensaje,
             s.fecha_solicitud,
+            e.precio,
             s.estado
           FROM solicitudes s
           JOIN registro r ON s.id_cliente = r.id
@@ -68,12 +69,7 @@ public function contarSolicitudesPendientes($id_proveedor) {
 }
 
 public function obtenerSolicitudesPorCliente($idCliente) {
-    $sql = "SELECT 
-                s.id,
-                e.nombre AS nombre_evento,
-                s.mensaje,
-                s.fecha_solicitud,
-                s.estado
+    $sql = "SELECT s.id, s.estado, s.fecha_solicitud, s.pagada, e.nombre AS nombre_evento, s.mensaje, e.precio
             FROM solicitudes s
             JOIN eventos e ON s.id_evento = e.id_evento
             WHERE s.id_cliente = ?";

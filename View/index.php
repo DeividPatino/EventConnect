@@ -4,7 +4,7 @@ require_once '../Model/EventoModel.php';
 require_once '../Model/SolicitudesModel.php';
 
 $model = new EventoModel();
-$eventos = $model->obtenerTodosLosEventos(); // asegúrate de tener este método en EventoModel
+$eventos = $model->obtenerTodosLosEventos();
 $model->cerrarConexion();
 
 $solicitudesPendientes = (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'proveedor') ? (new SolicitudesModel())->contarSolicitudesPendientes($_SESSION['id_usuario']) : 0;

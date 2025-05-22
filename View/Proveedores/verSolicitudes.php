@@ -26,22 +26,24 @@
           <th>Evento</th>
           <th>Mensaje</th>
           <th>Fecha</th>
+          <th>Precio</th>
           <th>Estado</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($solicitudes as $sol): ?>
+        <?php foreach ($solicitudes as $s): ?>
           <tr>
-            <td><?= htmlspecialchars($sol['nombre_cliente']) ?></td>
-            <td><?= htmlspecialchars($sol['nombre_evento']) ?></td>
-            <td><?= htmlspecialchars($sol['mensaje']) ?></td>
-            <td><?= $sol['fecha_solicitud'] ?></td>
-            <td><?= ucfirst($sol['estado']) ?></td>
+            <td><?= htmlspecialchars($s['nombre_cliente']) ?></td>
+            <td><?= htmlspecialchars($s['nombre_evento']) ?></td>
+            <td><?= htmlspecialchars($s['mensaje']) ?></td>
+            <td><?= htmlspecialchars($s['fecha_solicitud']) ?></td>
+            <td><?= number_format($s['precio'], 0, ',', '.') ?> COP</td>
+            <td><?= ucfirst($s['estado']) ?></td>
             <td>
-              <?php if ($sol['estado'] === 'pendiente'): ?>
+              <?php if ($s['estado'] === 'pendiente'): ?>
                 <form method="POST" action="../../Controller/Solicitudes/CambiarestadoCtrl.php" style="display:inline;">
-                 <input type="hidden" name="id_solicitud" value="<?= $sol['id'] ?>">
+                 <input type="hidden" name="id_solicitud" value="<?= $s['id'] ?>">
                  <input type="hidden" name="nuevo_estado" value="aceptada">
                  <button type="submit" class="boton boton-aceptar" aria-label="Aceptar">
                     <i class="bi bi-check-square-fill" style="font-size: 16px;"></i>
@@ -49,7 +51,7 @@
                  
                 </form>
                 <form method="POST" action="../../Controller/Solicitudes/CambiarestadoCtrl.php" style="display:inline;">
-                  <input type="hidden" name="id_solicitud" value="<?= $sol['id'] ?>">
+                  <input type="hidden" name="id_solicitud" value="<?= $s['id'] ?>">
                   <input type="hidden" name="nuevo_estado" value="rechazada">
                   <button type="submit" class="boton boton-rechazar" aria-label="Rechazar">
                     <i class="bi bi-check-square-fill" style="font-size: 16px;"></i>
