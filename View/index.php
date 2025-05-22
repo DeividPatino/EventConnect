@@ -7,7 +7,7 @@ $model = new EventoModel();
 $eventos = $model->obtenerTodosLosEventos(); // asegúrate de tener este método en EventoModel
 $model->cerrarConexion();
 
-$solicitudesPendientes = ($_SESSION['tipo'] === 'proveedor') ? (new SolicitudesModel())->contarSolicitudesPendientes($_SESSION['id_usuario']) : 0;
+$solicitudesPendientes = (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'proveedor') ? (new SolicitudesModel())->contarSolicitudesPendientes($_SESSION['id_usuario']) : 0;
 
 ?>
 <!DOCTYPE html>
