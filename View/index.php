@@ -1,9 +1,14 @@
 <?php
 session_start();
 require_once '../Model/EventoModel.php';
+require_once '../Model/SolicitudesModel.php';
+
 $model = new EventoModel();
 $eventos = $model->obtenerTodosLosEventos(); // asegúrate de tener este método en EventoModel
 $model->cerrarConexion();
+
+$solicitudesPendientes = ($_SESSION['tipo'] === 'proveedor') ? (new SolicitudesModel())->contarSolicitudesPendientes($_SESSION['id_usuario']) : 0;
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,6 +19,7 @@ $model->cerrarConexion();
   <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <script src="utils.js" defer></script>
 </head>
 <body>
@@ -23,13 +29,32 @@ $model->cerrarConexion();
     <input type="text" class="search-bar" placeholder="Buscar eventos" />
     
     <nav class="nav-links">
+      <!-- Proveedor -->
       <?php if (isset($_SESSION['id_usuario'])): ?>
         <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
           <a href="../View/Proveedores/publicareventos.html" id="crear-evento">Crear eventos</a>
          <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'proveedor'): ?>
-          <a href="../Controller/Solicitudes/VerSolicitudes.php">Ver solicitudes</a>
+          <a href="../Controller/Solicitudes/VerSolicitudes.php" class="btn btn-outline-secondary position-relative">
+            <i class="bi bi-card-list"></i> Solicitudes
+              <?php if ($solicitudesPendientes > 0): ?>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <?= $solicitudesPendientes ?>
+              </span>
+              <?php endif; ?>
+          </a>
          <?php endif; ?>
         <?php endif; ?>
+        
+        <!-- Cliente -->
+        <?php if (isset($_SESSION['id_usuario'])): ?>
+        <?php if ($_SESSION['tipo'] === 'cliente'): ?>
+          <a href="../Controller/SolicitudesCliente/versolicitudescliente.php" class="btn btn-outline-secondary position-relative">
+            <i class="bi bi-card-list"></i> Mis Solicitudes
+          </a>
+        <?php endif; ?>
+        <?php endif; ?>
+        
+        <!-- Todo -->
         <a href="../View/Proveedores/proovedor_panel.php">Centro de ayuda</a>
         <a href="#">Mis entradas</a>
         <a href="perfil.php">Editar perfil (<?= htmlspecialchars($_SESSION['nombre']) ?>)</a>
@@ -45,7 +70,7 @@ $model->cerrarConexion();
   <main class="main-section">
     <div class="hero">
       <div class="hero-text">
-        <h1><span class="highlight"></span><br>EL FUTURO DE LOS EVENTOS COMIENZA AQUÌ</h1>
+        <h1><span class="highlight">EL FUTURO DE LOS EVENTOS</span><br>COMIENZA AQUÍ</h1>
       </div>
       <img src="https://www.svgrepo.com/show/379005/event.svg" alt="Evento destacado" class="hero-image" />
     </div>

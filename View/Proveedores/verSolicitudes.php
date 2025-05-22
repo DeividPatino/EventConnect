@@ -27,7 +27,7 @@
         <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
           <a href="../../View/Proveedores/publicareventos.html" id="crear-evento">Crear eventos</a>
          <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'proveedor'): ?>
-          <a href="../Controller/Solicitudes/VerSolicitudes.php">Ver solicitudes</a>
+          <a href="../../Controller/Solicitudes/VerSolicitudes.php">Ver solicitudes</a>
          <?php endif; ?>
         <?php endif; ?>
         <a href="../../View/Proveedores/proovedor_panel.php">Centro de ayuda</a>
@@ -36,8 +36,8 @@
         <a href="../../Controller/CerrarsesionCtrl.php">Cerrar sesión</a>
       <?php else: ?>
         <a href="#">Centro de ayuda</a>
-        <a href="login.html">Iniciar sesión</a>
-        <a href="Registro.html">Registrarse</a>
+        <a href="../../View/login.html">Iniciar sesión</a>
+        <a href="../../Registro.html">Registrarse</a>
       <?php endif; ?>
     </nav>
   </header>

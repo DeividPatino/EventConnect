@@ -54,6 +54,45 @@ public function cambiarEstadoSolicitud($idSolicitud, $nuevoEstado) {
     return $stmt->execute([$nuevoEstado, $idSolicitud]);
 }
 
+public function contarSolicitudesPendientes($id_proveedor) {
+    $sql = "SELECT COUNT(*) AS total FROM solicitudes 
+            INNER JOIN eventos ON solicitudes.id_evento = eventos.id_evento 
+            WHERE eventos.id_proveedor = ? AND solicitudes.estado = 'pendiente'";
+
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("i", $id_proveedor);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $fila = $resultado->fetch_assoc();
+    return $fila['total'];
+}
+
+public function obtenerSolicitudesPorCliente($idCliente) {
+    $sql = "SELECT 
+                s.id,
+                e.nombre AS nombre_evento,
+                s.mensaje,
+                s.fecha_solicitud,
+                s.estado
+            FROM solicitudes s
+            JOIN eventos e ON s.id_evento = e.id_evento
+            WHERE s.id_cliente = ?";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("i", $idCliente);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+}
+
+public function cancelarSolicitud($idSolicitud, $idCliente) {
+    $sql = "UPDATE solicitudes SET estado = 'Cancelada' 
+            WHERE id = ? AND id_cliente = ? AND estado = 'pendiente'";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("ii", $idSolicitud, $idCliente);
+    return $stmt->execute();
+}
+
+
   public function cerrarConexion() {
         mysqli_close($this->conn);
     }

@@ -22,6 +22,7 @@ body {
   overflow-x: hidden;
 }
 
+
 .event-table {
   width: 100%;
   border-collapse: collapse;
@@ -44,7 +45,6 @@ body {
 .event-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
 
 .navbar {
   display: flex;
@@ -455,3 +455,4 @@ body {
   height: 20px;
   fill: white; /* si quieres que el icono tenga color */
 }
+
