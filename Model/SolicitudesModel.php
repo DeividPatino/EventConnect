@@ -95,6 +95,21 @@ public function marcarComoPagada($idSolicitud) {
     return $stmt->execute();
 }
 
+public function obtenerSolicitudPorId($id) {
+    $stmt = $this->conn->prepare("
+        SELECT s.id, s.mensaje, s.fecha_solicitud, s.estado, s.pagada,
+               e.nombre AS nombre_evento, e.precio
+        FROM solicitudes s
+        INNER JOIN eventos e ON s.id_evento = e.id_evento
+        WHERE s.id = ?
+    ");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    return $resultado->fetch_assoc();
+}
+
 
   public function cerrarConexion() {
         mysqli_close($this->conn);
