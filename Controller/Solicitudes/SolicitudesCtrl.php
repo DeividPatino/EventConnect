@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['id_usuario'])) {
   $resultado = $modelo->crearSolicitud($idCliente, $idEvento, $mensaje);
 
   if ($resultado) {
-    header('Location: ../View/detalleseventos.php?');
+    header("Location: ../../View/detalleseventos.php?id=$idEvento");
+
     exit();
   } else {
     echo "Error al enviar la solicitud.";

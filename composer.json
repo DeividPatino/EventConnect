@@ -1,0 +1,25 @@
+{
+    "name": "eventconnect/api",
+    "autoload": {
+        "psr-4": {
+            "Eventconnect\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DeividPatino",
+            "email": "patinodeivid4@gmail.com"
+        }
+    ],
+    "require": {
+        "okarook/php-sdk-pse": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/okarook/php-sdk-pse"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

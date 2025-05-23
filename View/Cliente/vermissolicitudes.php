@@ -111,7 +111,7 @@ h2 {
           <td><?= htmlspecialchars($s['estado']) ?></td>
           <td>
             <?php if ($s['estado'] === 'aceptada' && !$s['pagada']): ?>
-            <a href="pagar.php?id=<?= $s['id'] ?>" class="btn btn-success btn-sm"> <i class="bi bi-currency-dollar" style="font-size: 16px;"></i></a>
+            <a href="../../Controller/SolicitudesCliente/pagarCtrl.php?id=<?= $s['id'] ?>&precio=<?= $s['precio'] ?>" class="btn btn-success btn-sm"> <i class="bi bi-currency-dollar" style="font-size: 16px;"></i></a>
           <?php elseif ($s['pagada']): ?>
             <span class="text-success">Pagada</span>
           <?php else: ?>

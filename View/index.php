@@ -57,7 +57,7 @@ $solicitudesPendientes = (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'pro
         <!-- Todo -->
         <a href="../View/Proveedores/proovedor_panel.php">Centro de ayuda</a>
         <a href="#">Mis entradas</a>
-        <a href="perfil.php">Editar perfil (<?= htmlspecialchars($_SESSION['nombre']) ?>)</a>
+        <a href="editarperfil.php">Editar perfil (<?= htmlspecialchars($_SESSION['nombre']) ?>)</a>
         <a href="../Controller/CerrarsesionCtrl.php">Cerrar sesión</a>
       <?php else: ?>
         <a href="#">Centro de ayuda</a>

@@ -31,6 +31,26 @@ class RegistroModel {
         return mysqli_fetch_assoc($result);
     }
 
+    public function obtenerUsuarioPorId($id) {
+    $query = "SELECT * FROM registro WHERE id = " . intval($id);
+    $result = mysqli_query($this->conn, $query);
+    return mysqli_fetch_assoc($result);
+}
+
+public function actualizarPerfil($id, $nombre, $apellido, $correo, $contrasena = null) {
+    if ($contrasena) {
+        $query = "UPDATE registro SET nombre=?, apellido=?, correo=?, contraseña=? WHERE id=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("ssssi", $nombre, $apellido, $correo, $contrasena, $id);
+    } else {
+        $query = "UPDATE registro SET nombre=?, apellido=?, correo=? WHERE id=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("sssi", $nombre, $apellido, $correo, $id);
+    }
+    return $stmt->execute();
+}
+
+
     public function cerrarConexion() {
         mysqli_close($this->conn);
     }

@@ -88,6 +88,13 @@ public function cancelarSolicitud($idSolicitud, $idCliente) {
     return $stmt->execute();
 }
 
+public function marcarComoPagada($idSolicitud) {
+    $sql = "UPDATE solicitudes SET pagada = 1 WHERE id = ?";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("i", $idSolicitud);
+    return $stmt->execute();
+}
+
 
   public function cerrarConexion() {
         mysqli_close($this->conn);
