@@ -124,6 +124,19 @@ public function obtenerDatosClientePorSolicitud($idSolicitud) {
     return $resultado->fetch_assoc();
 }
 
+public function contarSolicitudesPendientesPorCliente($idCliente) {
+    $sql = "SELECT COUNT(*) AS total 
+            FROM solicitudes 
+            WHERE id_cliente = ? AND estado = 'pendiente'";
+    
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("i", $idCliente);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $fila = $resultado->fetch_assoc();
+    return $fila['total'];
+}
+
   public function cerrarConexion() {
         mysqli_close($this->conn);
     }

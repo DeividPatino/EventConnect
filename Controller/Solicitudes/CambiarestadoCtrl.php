@@ -19,7 +19,7 @@ if (isset($_SESSION['id_usuario']) && $_SESSION['tipo'] === 'proveedor') {
         // Validar que la solicitud pertenece al proveedor
         if ($modelo->verificarPropiedadSolicitud($idSolicitud, $_SESSION['id_usuario'])) {
             if ($modelo->cambiarEstadoSolicitud($idSolicitud, $nuevoEstado)) {
-                header("Location: verSolicitudesCtrl.php");
+                header("Location: ../../View/index.php");
                 exit;
             } else {
                 echo "Error al actualizar el estado.";

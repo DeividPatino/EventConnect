@@ -1,3 +1,25 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Verificar si la sesión está activa y si las variables necesarias existen
+if (!isset($_SESSION['id_usuario'])) {
+    echo "No estás logueado o tu sesión ha expirado.";
+    exit;
+}
+
+// Incluir el modelo
+require_once '../../Model/SolicitudesModel.php';
+
+// Crear una instancia del modelo
+$solicitudesModel = new SolicitudesModel();
+
+// Obtener las solicitudes del cliente (suponiendo que tienes el id del cliente en la sesión)
+$solicitudes = $solicitudesModel->obtenerSolicitudesPorCliente($_SESSION['id_usuario']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -146,26 +168,31 @@ h2 {
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($solicitudes as $s): ?>
-        <tr>
-          <td><?= htmlspecialchars($s['nombre_evento']) ?></td>
-          <td><?= htmlspecialchars($s['mensaje']) ?></td>
-          <td><?= htmlspecialchars($s['fecha_solicitud']) ?></td>
-          <td><?= number_format($s['precio'], 0, ',', '.') ?> COP</td>
-          <td><?= htmlspecialchars($s['estado']) ?></td>
-          <td>
-            <?php if ($s['estado'] === 'aceptada' && !$s['pagada']): ?>
-            <a href="../../Controller/SolicitudesCliente/pagarCtrl.php?id=<?= $s['id'] ?>&precio=<?= $s['precio'] ?>" class="btn btn-success btn-sm"> <i class="bi bi-currency-dollar" style="font-size: 16px;"></i></a>
+  <?php if (isset($solicitudes) && is_array($solicitudes)): ?>
+    <?php foreach ($solicitudes as $s): ?>
+      <tr>
+        <td><?= htmlspecialchars($s['nombre_evento']) ?></td>
+        <td><?= htmlspecialchars($s['mensaje']) ?></td>
+        <td><?= htmlspecialchars($s['fecha_solicitud']) ?></td>
+        <td><?= number_format($s['precio'], 0, ',', '.') ?> COP</td>
+        <td><?= htmlspecialchars($s['estado']) ?></td>
+        <td>
+          <?php if ($s['estado'] === 'aceptada' && !$s['pagada']): ?>
+            <a href="../../Controller/SolicitudesCliente/pagarCtrl.php?id=<?= $s['id'] ?>&precio=<?= $s['precio'] ?>" class="btn btn-success btn-sm">
+              <i class="bi bi-currency-dollar" style="font-size: 16px;"></i>
+            </a>
           <?php elseif ($s['pagada']): ?>
             <span class="text-success">Pagada</span>
           <?php else: ?>
             <span class="text-muted">En espera</span>
           <?php endif; ?>
-          
-          </td>
-        </tr>
-      <?php endforeach; ?>
-    </tbody>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+  <?php else: ?>
+    <tr><td colspan="6">No tienes solicitudes pendientes.</td></tr>
+  <?php endif; ?>
+</tbody>
   </table>
 </div>
 </body>

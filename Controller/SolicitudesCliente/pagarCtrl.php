@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $model->cerrarConexion();
 
-    header("Location: versolicitudescliente.php?pagado=1");
+    header("Location: ../../View/index.php?pagado=1");
     exit;
 }
 
