@@ -33,17 +33,35 @@ class EventoModel {
 
     public function obtenerEventoPorId($id_evento) {
         $id_evento = mysqli_real_escape_string($this->conn, $id_evento);
-        $query = "SELECT * FROM eventos WHERE id_evento = '$id_evento'";
+        $query = "
+            SELECT e.*, r.nombre AS proveedor_nombre, r.apellido AS proveedor_apellido, r.correo, r.telefono AS telefono_proveedor
+            FROM eventos e
+            JOIN registro r ON e.id_proveedor = r.id
+            WHERE e.id_evento = '$id_evento'
+        ";
         $result = mysqli_query($this->conn, $query);
         return mysqli_fetch_assoc($result);
     }
 
+
+
     public function eliminarEvento($id_evento) {
         $id_evento = mysqli_real_escape_string($this->conn, $id_evento);
-        $query = "DELETE FROM eventos WHERE id_evento = '$id_evento'";
-        return mysqli_query($this->conn, $query);
+
+        // Eliminar primero las valoraciones
+        $query_valoraciones = "DELETE FROM valoraciones WHERE id_evento = '$id_evento'";
+        mysqli_query($this->conn, $query_valoraciones);
+
+        // Luego eliminar las solicitudes
+        $query_solicitudes = "DELETE FROM solicitudes WHERE id_evento = '$id_evento'";
+        mysqli_query($this->conn, $query_solicitudes);
+
+        // Finalmente, eliminar el evento
+        $query_evento = "DELETE FROM eventos WHERE id_evento = '$id_evento'";
+        return mysqli_query($this->conn, $query_evento);
     }
-    
+
+
     public function editarEvento($id_evento, $nombre, $descripcion, $categoria, $lugar, $precio, $imagen) {
         $query = "UPDATE eventos SET 
                     nombre = '" . mysqli_real_escape_string($this->conn, $nombre) . "',
@@ -58,10 +76,38 @@ class EventoModel {
     }
 
     public function obtenerTodosLosEventos() {
-        $query = "SELECT * FROM eventos ORDER BY id_evento DESC";
+        $query = "SELECT * FROM eventos";
         $result = mysqli_query($this->conn, $query);
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
+
+    public function obtenerEventosPorCiudad($ciudad) {
+        $query = "SELECT * FROM eventos WHERE lugar = ?";
+        $stmt = mysqli_prepare($this->conn, $query);
+        mysqli_stmt_bind_param($stmt, "s", $ciudad);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
+    public function obtenerEventosPorCategoria($categoria) {
+        $query = "SELECT * FROM eventos WHERE LOWER(categoria) = LOWER(?)";
+        $stmt = mysqli_prepare($this->conn, $query);
+        mysqli_stmt_bind_param($stmt, "s", $categoria);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
+    public function obtenerEventosPorCiudadYCategoria($ciudad, $categoria) {
+        $query = "SELECT * FROM eventos WHERE LOWER(lugar) = LOWER(?) AND LOWER(categoria) = LOWER(?)";
+        $stmt = mysqli_prepare($this->conn, $query);
+        mysqli_stmt_bind_param($stmt, "ss", $ciudad, $categoria);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+    return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
 
     public function cerrarConexion() {
         mysqli_close($this->conn);

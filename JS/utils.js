@@ -21,15 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const mapFilter = {
-    "Todos":              "all",
-    "Para ti":            "for-you",
-    "Hoy":                "today",
-    "Este fin de semana": "weekend",
-    "Gratis":             "free",
-   
-  };
-
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       const key = mapFilter[ btn.textContent.trim() ] || "all";

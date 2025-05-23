@@ -3,90 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <title>Mis Solicitudes</title>
+  <link rel="stylesheet" href="../../CSS/Bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../../CSS/style.css">
   <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <style>
     body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
+  background-image: url('/EventConnect/Img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5f6f8;
+  overflow-x: hidden;
+  font-family: 'Inter', helvetica, arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #333;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0 3rem 0;
+  color: #ff5a5f;
+  font-weight: 800;
+  text-shadow: 0 0 4px rgba(255, 90, 95, 0.4);
 }
 
 .container {
-  max-width: 1100px;
-  background-color: #ffffff;
-  padding: 30px;
-  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+  background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente para toda la caja */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  padding: 2rem 2.5rem;
 }
 
 .table {
-  border-collapse: collapse;
   width: 100%;
-  margin-top: 10px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1); /* Fondo muy translúcido */
+  color: #f5f6f8;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.table thead {
-  background-color: #343a40;
-  color: white;
+.table thead tr {
+  background-color: rgba(255, 90, 95, 0.7);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.table th,
-.table td {
-  padding: 14px 16px;
-  vertical-align: middle;
-  text-align: left;
-}
-
-.table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+.table thead th,
+.table tbody td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .table tbody tr:hover {
-  background-color: #e9ecef;
+  background-color: rgba(53, 195, 193, 0.15);
+  cursor: default;
+  transition: background-color 0.3s ease;
 }
 
-.btn {
-  font-size: 0.95rem;
-  padding: 8px 12px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+
+.text-success {
+  color: #35c3c1;
+  font-weight: 700;
 }
 
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-}
-
-.text-muted {
+.text-muted, em {
+  color: #ccc;
   font-style: italic;
 }
 
-.text-success {
-  font-weight: bold;
-  color: #28a745;
-}
   </style>
 </head>
 <body>
+
+<header class="navbar">
+    <div class="logo">EventConnect</div>
+    <input type="text" class="search-bar" id="busqueda-evento" placeholder="Buscar eventos" />
+    
+    <nav class="nav-links">
+      <!-- Proveedor -->
+      <?php if (isset($_SESSION['id_usuario'])): ?>
+        <?php if ($_SESSION['tipo'] === 'proveedor'): ?>
+          <a href="../Proveedores/publicareventos.html" id="crear-evento" class="btn btn-outline-secondary position-relative">
+            <i class="bi bi-plus-circle" style="font-size: 20px;"></i>Crear eventos</a>
+         <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'proveedor'): ?>
+          <a href="../../Controller/Solicitudes/VerSolicitudes.php" class="btn btn-outline-secondary position-relative">
+            <i class="bi bi-card-list" style="font-size: 20px;"></i> Solicitudes
+              <?php if ($solicitudesPendientes > 0): ?>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <?= $solicitudesPendientes ?>
+              </span>
+              <?php endif; ?>
+          </a>
+         <?php endif; ?>
+        <?php endif; ?>
+        
+        <!-- Cliente -->
+        <?php if (isset($_SESSION['id_usuario'])): ?>
+        <?php if ($_SESSION['tipo'] === 'cliente'): ?>
+          <a href="../../Controller/SolicitudesCliente/versolicitudescliente.php" class="btn btn-outline-secondary position-relative">
+            <i class="bi bi-card-list" style="font-size: 20px;"></i> Mis Solicitudes
+          </a>
+        <?php endif; ?>
+        <?php endif; ?>
+        
+        <!-- Todo -->
+        <a href="../Proveedores/proovedor_panel.php" class="btn btn-outline-secondary position-relative">
+          <i class="bi bi-question-circle" style="font-size: 20px;"></i> Centro de ayuda</a>
+        <a href="/EventConnect/View/editarperfil.php" class="btn btn-outline-secondary position-relative">
+          <i class="bi bi-person-circle" style="font-size: 20px;"></i> <?php echo htmlspecialchars($_SESSION['nombre']); ?></a>
+        <a href="../../Controller/CerrarsesionCtrl.php" class="btn btn-outline-secondary position-relative">
+          <i class="bi bi-door-open" style="font-size: 20px;"></i>Cerrar sesion</a>
+      <?php else: ?>
+        <a href="#">Centro de ayuda</a>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="Registro.html">Registrarse</a>
+      <?php endif; ?>
+    </nav>
+  </header><br>
 
 <div class="container mt-4">
   <h2>Mis Solicitudes</h2>

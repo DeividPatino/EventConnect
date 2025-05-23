@@ -15,11 +15,12 @@ class RegistroModel {
         return mysqli_num_rows($result) > 0;
     }
 
-    public function registrarUsuario($nombre, $apellido, $correo, $contraseña, $tipo) {
-        $query = "INSERT INTO registro(nombre, apellido, correo, contraseña, tipo) 
+    public function registrarUsuario($nombre, $apellido, $correo, $telefono, $contraseña, $tipo) {
+        $query = "INSERT INTO registro(nombre, apellido, correo, telefono, contraseña, tipo) 
                   VALUES('" . mysqli_real_escape_string($this->conn, $nombre) . "', 
                          '" . mysqli_real_escape_string($this->conn, $apellido) . "', 
                          '" . mysqli_real_escape_string($this->conn, $correo) . "', 
+                         '" . mysqli_real_escape_string($this->conn, $telefono) . "', 
                          '" . mysqli_real_escape_string($this->conn, $contraseña) . "', 
                          '" . mysqli_real_escape_string($this->conn, $tipo) . "')";
         return mysqli_query($this->conn, $query);
@@ -37,19 +38,18 @@ class RegistroModel {
     return mysqli_fetch_assoc($result);
 }
 
-public function actualizarPerfil($id, $nombre, $apellido, $correo, $contrasena = null) {
+public function actualizarPerfil($id, $nombre, $apellido, $correo, $telefeno, $contrasena = null) {
     if ($contrasena) {
-        $query = "UPDATE registro SET nombre=?, apellido=?, correo=?, contraseña=? WHERE id=?";
+        $query = "UPDATE registro SET nombre=?, apellido=?, correo=?, telefono=?, contraseña=? WHERE id=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("ssssi", $nombre, $apellido, $correo, $contrasena, $id);
+        $stmt->bind_param("sssssi", $nombre, $apellido, $correo, $telefeno, $contrasena, $id);
     } else {
-        $query = "UPDATE registro SET nombre=?, apellido=?, correo=? WHERE id=?";
+        $query = "UPDATE registro SET nombre=?, apellido=?, correo=?, telefono=? WHERE id=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("sssi", $nombre, $apellido, $correo, $id);
+        $stmt->bind_param("ssssi", $nombre, $apellido, $correo, $telefeno, $id);
     }
     return $stmt->execute();
 }
-
 
     public function cerrarConexion() {
         mysqli_close($this->conn);
