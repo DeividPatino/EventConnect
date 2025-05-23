@@ -6,6 +6,75 @@
   <title>EventConnect - Registro</title>
   <link rel="stylesheet" href="../CSS/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Special+Gothic&display=swap" rel="stylesheet">
+  <style>
+    /* Cuerpo como flex container centrado */
+body.form-page {
+  display: flex;
+  justify-content: center;  /* Centra horizontal */
+  align-items: center;      /* Centra vertical */
+  min-height: 100vh;        /* Alto de toda la pantalla */
+  margin: 0;
+  padding: 0 1rem;          /* Algo de padding lateral */
+  background-image: url('/EventConnect/Img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Capa oscura para contraste */
+body.form-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* Formulario con ancho fijo max y fondo semitransparente */
+.form-registro {
+  width: 100%;
+  max-width: 420px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Inputs y botones igual que antes */
+.form-registro input,
+.form-registro select {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.form-registro input[type="submit"] {
+  background-color: #35c3c1;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  padding: 0.85em;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.form-registro input[type="submit"]:hover {
+  background-color: #2ea9a6;
+}
+
+  </style>
 </head>
 <body class="form-page">
   <form action="../Controller/RegistroCtrl.php" method="post" class="form-registro">
@@ -30,7 +99,7 @@
     <input type="submit" value="Registrar" />
     
     <div style="text-align: center; margin-top: 1em;">
-      <a href="login.html" style="color: #000000; text-decoration: none;">¿Ya tienes una cuenta? Inicia sesión</a>
+      <a href="login.html" style="color: #ffffff; text-decoration: none;">¿Ya tienes una cuenta? Inicia sesión</a>
     </div>
   </form>
 </body>

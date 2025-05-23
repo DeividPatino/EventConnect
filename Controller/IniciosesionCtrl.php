@@ -13,6 +13,7 @@ if ($row && password_verify($contrasena, $row['contraseña'])) {
     $_SESSION['id_usuario'] = $row['id'];
     $_SESSION['tipo'] = $row['tipo'];
     $_SESSION['nombre'] = $row['nombre'];
+    $_SESSION['correo'] = $row['correo'];
 
     echo "";
     header("Location: ../View/index.php");

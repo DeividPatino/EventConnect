@@ -110,6 +110,19 @@ public function obtenerSolicitudPorId($id) {
     return $resultado->fetch_assoc();
 }
 
+public function obtenerDatosClientePorSolicitud($idSolicitud) {
+    $stmt = $this->conn->prepare("
+        SELECT r.nombre, r.correo
+        FROM solicitudes s
+        INNER JOIN registro r ON s.id_cliente = r.id
+        WHERE s.id = ?
+        LIMIT 1
+    ");
+    $stmt->bind_param("i", $idSolicitud);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_assoc();
+}
 
   public function cerrarConexion() {
         mysqli_close($this->conn);

@@ -146,31 +146,26 @@ h2 {
       </tr>
     </thead>
     <tbody>
-  <?php foreach ($solicitudes as $s): ?>
-    <tr>
-      <td><?= htmlspecialchars($s['nombre_evento']) ?></td>
-      <td><?= htmlspecialchars($s['mensaje']) ?></td>
-      <td><?= htmlspecialchars($s['fecha_solicitud']) ?></td>
-      <td><?= number_format($s['precio'], 0, ',', '.') ?> COP</td>
-      <td><?= htmlspecialchars($s['estado']) ?></td>
-      <td>
-        <?php if ($s['estado'] === 'aceptada' && !$s['pagada']): ?>
-          <a href="../../Controller/SolicitudesCliente/pagarCtrl.php?id=<?= $s['id'] ?>&precio=<?= $s['precio'] ?>" class="btn btn-success btn-sm">
-            <i class="bi bi-currency-dollar" style="font-size: 16px;"></i>
-          </a>
-        <?php elseif ($s['pagada']): ?>
-          <a href="../../Controller/SolicitudesCliente/facturaPDF.php?id=<?= $s['id'] ?>" class="btn btn-outline-light btn-sm" target="_blank">
-            <i class="bi bi-file-earmark-pdf"></i> Ver Factura
-          </a>
-          <span class="text-success d-block mt-1">Pagada</span>
-        <?php else: ?>
-          <span class="text-muted">En espera</span>
-        <?php endif; ?>
-      </td>
-    </tr>
-  <?php endforeach; ?>
-</tbody>
-
+      <?php foreach ($solicitudes as $s): ?>
+        <tr>
+          <td><?= htmlspecialchars($s['nombre_evento']) ?></td>
+          <td><?= htmlspecialchars($s['mensaje']) ?></td>
+          <td><?= htmlspecialchars($s['fecha_solicitud']) ?></td>
+          <td><?= number_format($s['precio'], 0, ',', '.') ?> COP</td>
+          <td><?= htmlspecialchars($s['estado']) ?></td>
+          <td>
+            <?php if ($s['estado'] === 'aceptada' && !$s['pagada']): ?>
+            <a href="../../Controller/SolicitudesCliente/pagarCtrl.php?id=<?= $s['id'] ?>&precio=<?= $s['precio'] ?>" class="btn btn-success btn-sm"> <i class="bi bi-currency-dollar" style="font-size: 16px;"></i></a>
+          <?php elseif ($s['pagada']): ?>
+            <span class="text-success">Pagada</span>
+          <?php else: ?>
+            <span class="text-muted">En espera</span>
+          <?php endif; ?>
+          
+          </td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
   </table>
 </div>
 </body>
