@@ -26,3 +26,4 @@ $_SESSION['pago_precio'] = $precio;
 // Redirige a la vista
 header("Location: ../../View/Cliente/pagar.php");
 exit;
+?>
